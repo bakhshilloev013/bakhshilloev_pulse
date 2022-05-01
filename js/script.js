@@ -72,12 +72,24 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener("click", e => {
             e.preventDefault();
             if (item == catalog_tabs[0]) {
+                catalog_tabs[1].classList.remove("catalog__tab_active");
+                catalog_tabs[2].classList.remove("catalog__tab_active");
+                catalog_contents[1].classList.remove("catalog__content_active");
+                catalog_contents[2].classList.remove("catalog__content_active");
                 catalog_contents[i].classList.toggle("catalog__content_active");
             }
             else if (item == catalog_tabs[2]) {
+                catalog_tabs[0].classList.remove("catalog__tab_active");
+                catalog_tabs[1].classList.remove("catalog__tab_active");
+                catalog_contents[0].classList.remove("catalog__content_active");
+                catalog_contents[1].classList.remove("catalog__content_active");
                 catalog_contents[i].classList.toggle("catalog__content_active");
             }
             else if (item == catalog_tabs[1]){
+                catalog_tabs[0].classList.remove("catalog__tab_active");
+                catalog_tabs[2].classList.remove("catalog__tab_active");
+                catalog_contents[0].classList.remove("catalog__content_active");
+                catalog_contents[2].classList.remove("catalog__content_active");
                 catalog_contents[i].classList.toggle("catalog__content_active");
             } else {alert(false)}
 
